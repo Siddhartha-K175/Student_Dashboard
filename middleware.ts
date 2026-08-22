@@ -13,10 +13,10 @@ export async function middleware(request: NextRequest) {
         get(name: string) {
           return request.cookies.get(name)?.value;
         },
-          set(name: string, value: string, options: CookieOptions) {{
+          set(name: string, value: string, options: CookieOptions) {
           response.cookies.set({ name, value, ...options });
         },
-          remove(name: string, options: CookieOptions) { {
+          remove(name: string, options: CookieOptions)  {
           response.cookies.set({ name, value: "", ...options });
         },
       },
